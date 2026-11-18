@@ -115,11 +115,11 @@ p { margin: 0 0 1em; }
 .prose { max-width: 68ch; }
 .prose p + p { margin-top: 0.25em; }
 
-/* founder */
-.founder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2.5rem; align-items: start; }
-.founder .name { font-family: var(--serif); font-size: 2.2rem; color: var(--varnish-deep); line-height: 1.1; }
-.founder .role { color: var(--ink-soft); margin-top: 0.4rem; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem; }
-.founder .instrument { margin-top: 1.25rem; padding: 1rem 1.1rem; border-left: 3px solid var(--gold); background: var(--paper-deep); font-size: 0.98rem; color: var(--ink-soft); }
+/* founders */
+.founders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.75rem; margin-top: 0.5rem; }
+.founder-card h3 { font-size: 1.9rem; color: var(--varnish-deep); }
+.founder-card .role { color: var(--gold); margin: 0.3rem 0 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.82rem; font-weight: 600; }
+.founder-card p { font-size: 1rem; }
 
 /* concert */
 .concert { max-width: 760px; margin-top: 1.5rem; }
@@ -136,10 +136,19 @@ p { margin: 0 0 1em; }
 
 /* upcoming concert */
 .upcoming {
-  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.75rem; align-items: start;
-  padding: 1.5rem 1.75rem; margin: 0.25rem 0 3.5rem; background: #fff; border: 1px solid var(--gold-soft);
+  padding: 1.75rem 2rem 2rem; margin: 0.25rem 0 4rem; background: #fff; border: 1px solid var(--gold-soft);
   border-radius: 10px; box-shadow: 0 10px 30px rgba(43, 29, 26, 0.08);
 }
+.upcoming-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.75rem; align-items: start; }
+.upcoming-venue { font-weight: 600; color: var(--varnish-deep); }
+.upcoming-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 2.5rem; margin-top: 1.75rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); }
+.upcoming h3 { font-size: 1.45rem; color: var(--varnish-deep); margin-bottom: 0.6rem; }
+.upcoming .program .work { font-size: 1.1rem; }
+.guest + .guest { margin-top: 1.2rem; }
+.guest h4 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; margin: 0; color: var(--varnish-deep); }
+.guest .inst { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; margin: 0.2rem 0 0.5rem; }
+.guest p:last-child { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
+.guest-more { margin-top: 1.2rem; font-size: 0.95rem; color: var(--ink-soft); }
 .upcoming-date {
   display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 88px;
   padding: 0.7rem 0.5rem; border-radius: 8px; background: var(--varnish-deep); color: #fbf5e9; line-height: 1;
@@ -221,9 +230,11 @@ footer { padding: 1.75rem 0 2.5rem; font-size: 0.9rem; color: var(--ink-soft); }
 footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
 @media (max-width: 720px) {
-  .founder { grid-template-columns: 1fr; gap: 1.5rem; }
+  .founders { grid-template-columns: 1fr; gap: 2rem; }
+  .upcoming-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .upcoming-head { grid-template-columns: 1fr; gap: 1rem; }
   .hero-grid .carousel { margin-right: 0; }
-  .upcoming { grid-template-columns: 1fr; gap: 1rem; padding: 1.25rem; }
+  .upcoming { padding: 1.25rem; }
   .upcoming-date { flex-direction: row; gap: 0.6rem; width: max-content; min-width: 0; padding: 0.5rem 0.9rem; }
   .upcoming-day { font-size: 1.5rem; margin: 0; }
   .nav .wrap { min-height: 0; padding: 0.55rem 0 0.6rem; }
