@@ -8,10 +8,10 @@ Static site for the SF Cello Choir: one page, no build step.
 
 ## Publishing at sfcellochoir.org
 
-The domain is registered at GoDaddy. The repo is `alex2awesome/sf-cello-choir`, published from `main` with GitHub Pages at https://alex2awesome.github.io/sf-cello-choir/ until the domain is attached.
+The domain is registered at GoDaddy. The repo is `alex2awesome/sf-cello-choir`, published from `main` with GitHub Pages.
 
 1. Done: repo created and Pages enabled (source "Deploy from a branch", branch `main`, folder `/ (root)`).
-2. After the DNS records below resolve, set the custom domain: repo Settings, Pages, Custom domain `sfcellochoir.org` (GitHub commits a `CNAME` file). Tick "Enforce HTTPS" once the certificate has been issued, a few minutes to an hour later. Setting the domain earlier would make the github.io address redirect to a domain that does not resolve yet.
+2. Done: `CNAME` in the repo sets the custom domain to `sfcellochoir.org`, so the github.io address redirects there. "Enforce HTTPS" goes on once GitHub has issued the certificate, a few minutes to an hour after the DNS records below resolve.
 3. In GoDaddy (Domain Portfolio, the domain, DNS, DNS Records), replace the parked `@` A record with these four A records, and point `www` at the Pages host:
 
    | Type  | Name | Value                      |
