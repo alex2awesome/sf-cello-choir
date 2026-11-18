@@ -126,11 +126,6 @@ p { margin: 0 0 1em; }
 .roster { list-style: none; margin: 0; padding: 0; }
 .roster li { padding: 0.45rem 0; border-bottom: 1px dotted var(--gray-light); }
 .roster li:last-child { border-bottom: 0; }
-.guest + .guest { margin-top: 1.2rem; }
-.guest h4 { font-size: 1.3rem; font-weight: 600; }
-.guest .inst { font-family: var(--serif); font-style: italic; color: var(--gray); font-size: 1.05rem; margin: 0.15rem 0 0.45rem; }
-.guest p:last-child { font-size: 0.95rem; color: var(--ink-soft); margin: 0; }
-.guest-more { margin-top: 1.2rem; font-size: 0.95rem; color: var(--ink-soft); }
 .recordings-title { margin-top: 2.25rem; padding-top: 1.6rem; border-top: 1px solid var(--rule); }
 .more-recordings { margin: 1.5rem 0 0; font-size: 0.95rem; color: var(--ink-soft); }
 
@@ -153,6 +148,8 @@ p { margin: 0 0 1em; }
 
 /* musicians */
 .people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; margin-top: 1rem; }
+.people-label { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.25rem; color: var(--gray); margin: 2.5rem 0 0; }
+.section h2 + .people-label { margin-top: 0.5rem; }
 .person { border-top: 1px solid var(--ink); padding-top: 1.1rem; }
 .person h3 { font-size: 1.6rem; }
 .person .inst { font-family: var(--serif); font-style: italic; color: var(--gray); font-size: 1.05rem; margin: 0.2rem 0 0.7rem; }
